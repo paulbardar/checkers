@@ -1,0 +1,148 @@
+* {
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	background:#FBF988;
+	margin-top:50px;
+}
+.checkers {
+	position: relative;
+	padding: 20px;
+	max-width:80%;
+	width: 600px;
+	height: 600px;
+	margin: 0 auto;
+	border:20px solid white;
+	background: #FFF;
+	/*outline: 2px black;*/
+}
+.checkers-desk {
+	position:absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 550px;
+	height: 550px;
+	border: 3px solid  #AEAEAE;
+}
+
+.row {
+	position: absolute;
+	width: 100%;
+	height: 12.5%;
+	left: 0;
+	background:#FFF;
+}
+
+.row-1 {
+	top:0%;
+}
+.row-2 {
+	top:12.5%;
+}
+.row-3 {
+	top:25%;
+}
+.row-4 {
+	top:37.5%;
+}
+.row-5 {
+	top:50%;
+}
+.row-6 {
+	top:62.5%;
+}
+.row-7 {
+	top:75%;
+}
+.row-8 {
+	top:87.5%;
+}
+.checkerboard {
+	position: absolute;
+	height: 100%;
+	width: 12.5%;
+}
+.checker-board-1 {
+	left: 0%;
+}
+.checker-board-2 {
+	left: 12.5%;
+}
+.checker-board-3 {
+	left: 25%;
+}
+.checker-board-4 {
+	left: 37.5%;
+}
+.checker-board-5 {
+	left: 50%;
+}
+.checker-board-6 {
+	left: 62.5%;
+}
+.checker-board-7 {
+	left: 75%;
+}
+.checker-board-8 {
+	left: 87.5%;
+}
+.row:nth-child(odd) .checkerboard:nth-child(odd) {
+	background: #AEAEAE;
+}
+.row:nth-child(even) .checkerboard:nth-child(even) {
+	background: #AEAEAE;
+}
+.row-1 .checkerboard:nth-child(odd)::after,
+.row-2 .checkerboard:nth-child(even)::after,
+.row-3 .checkerboard:nth-child(odd)::after {
+	content:"";
+	position:absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 75%;
+	height: 75%;
+	border-radius: 50%;
+	background: #E74A38;
+	box-shadow: 1px 2px 2px;
+}
+.row-1 .checkerboard:nth-child(odd):hover::after,
+.row-2 .checkerboard:nth-child(even):hover::after,
+.row-3 .checkerboard:nth-child(odd):hover::after {
+	bottom:30%;
+	left:30%;
+}
+.row-6 .checkerboard:nth-child(even)::after,
+.row-7 .checkerboard:nth-child(odd)::after,
+.row-8 .checkerboard:nth-child(even)::after {
+	content:"";
+	position:absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 75%;
+	height: 75%;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 1px 2px 2px;
+}
+.row-6 .checkerboard:nth-child(even):hover::after,
+.row-7 .checkerboard:nth-child(odd):hover::after,
+.row-8 .checkerboard:nth-child(even):hover::after {
+	bottom:30%;
+	left:30%;
+}
+[draggable] {
+	-khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
